@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-link-hover,
+  .nav-link-active {
+    @apply border-b border-transparent uppercase transition duration-200 hover:border-brand-dark hover:text-brand-dark;
+  }
+  .swiper-pagination {
+    @apply bg-transparent;
+  }
+
+  .swiper-pagination-bullet {
+    @apply h-3 w-3 rounded-full bg-white opacity-50 transition-colors !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply opacity-100 !important;
+  }
+
+  .active {
+    @apply text-brand-dark;
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-up {
+    @apply translate-y-4 opacity-0;
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+
+  .delay-800 {
+    animation-delay: 0.8s;
+  }
+
+  .nav-item {
+    @apply text-sm font-medium uppercase text-gray-700;
+  }
+
+  .footer-item {
+    @apply text-sm font-medium uppercase;
+  }
+
+  .card-title {
+    @apply py-2 pl-4 font-satoshi text-2xl font-semibold capitalize text-gray-800 lg:py-6 lg:pl-10 lg:text-3xl;
+  }
+
+  .hero-content {
+    @apply absolute inset-0 flex flex-col items-start justify-center space-y-2 pl-4 lg:space-y-4 lg:pl-10;
+  }
+
+  .hero-title {
+    @apply fade-in-up delay-800 font-satoshi text-xl font-semibold text-gray-900 drop-shadow-lg lg:text-5xl;
+  }
+
+  .hero-subtitle {
+    @apply fade-in-up delay-800 bg-white px-1 font-satoshi text-base font-medium text-brand-dark drop-shadow-sm lg:text-4xl;
+  }
+
+  .description-title {
+    @apply text-base lg:text-lg;
+  }
+
+  .description-content {
+    @apply text-sm text-gray-700 lg:text-base;
+  }
+}

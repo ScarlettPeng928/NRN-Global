@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/60c27c6458.js"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--CSS-->
+    <link rel="stylesheet" href="/dist/swiper-bundle.min.css" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="tracking-normal lg:tracking-wider">
+    <!-- Header -->
+    <header class="relative">
+      <div
+        class="fixed left-0 top-0 z-50 w-full overflow-hidden bg-brand-dark font-inter text-sm font-normal text-white"
+      >
+        <div class="animate-marquee whitespace-nowrap py-2">
+          <span class="mx-20">Naturel . Renaître . Nouveau</span>
+          <span class="mx-20">BRAND NEW ONLINE</span>
+          <span class="mx-20">FREE SHIPPING ON ORDERS $100+</span>
+        </div>
+      </div>
+      <nav
+        id="navbar"
+        class="fixed top-[32px] z-50 w-full bg-transparent font-inter"
+      >
+        <!-- Desktop nav -->
+        <div
+          class="hidden grid-cols-3 items-center justify-between px-20 py-5 lg:grid"
+        >
+          <!-- Left nav -->
+          <ul class="nav-item flex space-x-8">
+            <li id="shop-link" class="group relative p-3">
+              <a href="#" class="nav-link-hover">shop</a>
+            </li>
+            <li class="p-3">
+              <a href="/pages/nav/skin.html" class="nav-link-hover">skin</a>
+            </li>
+            <li class="p-3">
+              <a href="/pages/nav/home.html" class="nav-link-hover">home</a>
+            </li>
+            <li class="p-3">
+              <a href="/pages/nav/lifestyle.html" class="nav-link-hover"
+                >lifestyle</a
+              >
+            </li>
+          </ul>
+          <!-- Center logo -->
+          <div class="flex justify-center">
+            <a href="/index.html">
+              <img src="/assets/LOGO.png" alt="NRN Logo" class="h-6" />
+            </a>
+          </div>
+
+          <!-- Right nav -->
+          <ul class="nav-item flex justify-end space-x-8">
+            <li class="p-3">
+              <a href="/pages/nav/about.html" class="nav-link-hover">about</a>
+            </li>
+            <li class="p-3">
+              <a href="/pages/nav/contact.html" class="nav-link-hover"
+                >contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!--Mobile nav -->
+        <div class="w-full lg:hidden">
+          <div class="nav-item flex items-center justify-between px-4 py-3">
+            <!-- Left-->
+            <div class="w-10 flex-none">
+              <!-- 漢堡鍵 -->
+              <button id="hamburger-btn" class="p-2">
+                <i class="fas fa-bars text-xl"></i>
+              </button>
+
+              <!-- 遮罩 -->
+              <div
+                id="mobile-overlay"
+                class="fixed inset-0 z-40 hidden bg-black bg-opacity-50 lg:hidden"
+              ></div>
+
+              <!-- Mobile Panel：整個 panel 同時包含第一／第二層 -->
+              <div
+                id="mobile-menu"
+                class="fixed inset-y-0 left-0 z-50 w-screen max-w-xs -translate-x-full transform flex-col space-y-4 bg-white p-6 shadow-lg transition-transform duration-300 ease-in-out lg:hidden"
+              >
+                <!-- 關閉鍵 -->
+                <button id="close-btn" class="self-end p-2">
+                  <i class="fas fa-times text-xl"></i>
+                </button>
+
+                <!-- ★ 第一層選單 ★ -->
+                <ul
+                  id="mobile-menu-level1"
+                  class="flex flex-col space-y-4 uppercase"
+                >
+                  <li>
+                    <a href="#" id="mobile-shop-link" class="nav-link-active">
+                      SHOP
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/pages/nav/skin.html" class="nav-link-active"
+                      >skin</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/pages/nav/home.html" class="nav-link-active"
+                      >home</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/pages/nav/lifestyle.html" class="nav-link-active"
+                      >lifestyle</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/pages/nav/about.html" class="nav-link-active"
+                      >about</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/pages/nav/contact.html" class="nav-link-active"
+                      >contact</a
+                    >
+                  </li>
+                </ul>
+
+                <!-- ★ 第二層選單（預設隱藏） ★ -->
+                <div class="flex flex-col">
+                  <ul id="mobile-menu-level2" class="hidden space-y-4">
+                    <button
+                      id="mobile-back-btn"
+                      class="text-left text-sm text-brand-dark"
+                    >
+                      ← Back
+                    </button>
+                    <li>
+                      <a href="/pages/nav/viewall.html" class="nav-link-active"
+                        >view all</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/collection/salt.html"
+                        class="nav-link-active"
+                        >salt</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/collection/tea.html"
+                        class="nav-link-active"
+                        >tea</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/collection/nail.html"
+                        class="nav-link-active"
+                        >nail</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/collection/foret.html"
+                        class="nav-link-active"
+                        >forêt</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/collection/sleep.html"
+                        class="nav-link-active"
+                        >sleep</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/collection/cotton.html"
+                        class="nav-link-active"
+                        >cotton</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Center-->
+            <div class="flex flex-1 justify-center">
+              <a href="/index.html">
+                <img src="/assets/LOGO.png" alt="NRN Logo" class="h-5" />
+              </a>
+            </div>
+            <!-- Right-->
+            <div class="w-10 flex-none"></div>
+          </div>
+        </div>
+
+        <!--Dropdown-->
+        <div
+          id="dropdown-shop"
+          class="h-min-[360px] absolute left-0 top-full z-40 hidden w-screen bg-white shadow-lg"
+        >
+          <div class="mx-auto grid max-w-screen-2xl grid-cols-4 py-10 lg:px-20">
+            <!-- Column 1 -->
+            <div>
+              <p class="mb-4 text-base font-light capitalize text-gray-500">
+                shop
+              </p>
+              <ul class="nav-item space-y-4">
+                <li>
+                  <a href="/pages/nav/viewall.html" class="nav-link-hover"
+                    >view all</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Column 2 -->
+            <div>
+              <p class="mb-4 text-base font-light capitalize text-gray-500">
+                by collection
+              </p>
+              <ul class="nav-item space-y-4">
+                <li>
+                  <a href="/pages/collection/salt.html" class="nav-link-hover"
+                    >salt</a
+                  >
+                </li>
+                <li>
+                  <a href="/pages/collection/tea.html" class="nav-link-hover"
+                    >tea</a
+                  >
+                </li>
+                <li>
+                  <a href="/pages/collection/nail.html" class="nav-link-hover"
+                    >nail</a
+                  >
+                </li>
+                <li>
+                  <a href="/pages/collection/foret.html" class="nav-link-hover"
+                    >forêt</a
+                  >
+                </li>
+                <li>
+                  <a href="/pages/collection/sleep.html" class="nav-link-hover"
+                    >sleep</a
+                  >
+                </li>
+                <li>
+                  <a href="/pages/collection/cotton.html" class="nav-link-hover"
+                    >cotton</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Column 3 -->
+            <div></div>
+            <!-- Column 4 -->
+            <div></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="pt-[80px] lg:pt-[150px]">
+      <section
+        class="mx-auto grid-cols-2 justify-between bg-white py-5 capitalize sm:px-0 lg:grid lg:px-20"
+      >
+        <div class="aspect-square w-full justify-start">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3629.881738956462!2d121.56754467526486!3d25.039224177809135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6982eac41%3A0xfbd338ee6b863d84!2sNo.%20102%2C%20Songlong%20Rd%2C%20Xinyi%20District%2C%20Taipei%20City%2C%20Taiwan%20110!5e0!3m2!1sen!2stw!4v1719764853810!5m2!1sen!2stw&hl=en"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+        <div class="my-auto justify-end space-y-6 p-8 capitalize">
+          <div class="product-title space-y-4">
+            <h1 class="text-2xl font-semibold text-gray-900 lg:text-3xl">
+              contact info
+            </h1>
+            <ul class="description-content space-y-4">
+              <li>+886-2-77518226</li>
+              <li>service@yunsyu.com</li>
+              <li>
+                5F, No. 102 Songlong Road, Xinyi District, Taipei City, Taiwan
+              </li>
+              <hr />
+            </ul>
+            <ul class="space-y-4">
+              <li class="text-base font-medium text-gray-900 lg:text-lg">
+                Opening Hours
+              </li>
+              <li class="description-content">
+                Monday – Friday : 09:00 AM – 18:00 PM
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-10 bg-brand-dark py-12 font-inter text-white">
+      <div
+        class="mx-auto grid w-screen grid-cols-1 gap-8 text-sm lg:grid-cols-4"
+      >
+        <!-- BY CATEGORY -->
+        <div class="mx-auto space-y-2 uppercase">
+          <p class="text-xs font-normal text-gray-500">by category</p>
+          <ul class="footer-item space-y-2">
+            <li><a href="/pages/nav/viewall.html">shop</a></li>
+            <li><a href="/pages/nav/skin.html">skin</a></li>
+            <li><a href="/pages/nav/home.html">home</a></li>
+            <li><a href="/pages/nav/lifestyle.html">lifestyle</a></li>
+          </ul>
+        </div>
+
+        <!-- BY COLLECTION -->
+        <div class="mx-auto space-y-2 uppercase">
+          <p class="text-xs font-normal text-gray-500">By Collection</p>
+          <ul class="footer-item space-y-2">
+            <li><a href="/pages/collection/foret.html">foret</a></li>
+            <li><a href="/pages/collection/sleep.html">sleep</a></li>
+            <li><a href="/pages/collection/nail.html">nail</a></li>
+            <li><a href="/pages/collection/cotton.html">cotton</a></li>
+            <li><a href="/pages/collection/salt.html">salt</a></li>
+            <li><a href="/pages/collection/tea.html">tea</a></li>
+          </ul>
+        </div>
+
+        <!-- GET TO KNOW US -->
+        <div class="mx-auto space-y-2 uppercase">
+          <p class="text-xs font-normal text-gray-500">Get to know us</p>
+          <ul class="footer-item space-y-2">
+            <li><a href="/pages/nav/about.html">About</a></li>
+            <li><a href="/pages/nav/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- SOCIAL MEDIA ICON-->
+        <div class="mx-auto space-y-2 uppercase">
+          <!-- 標題 -->
+          <p class="text-xs font-normal text-gray-500">Stay in Touch</p>
+
+          <!-- 表單 -->
+          <form class="flex overflow-hidden rounded-3xl border border-white">
+            <input
+              type="email"
+              placeholder="Enter email address"
+              class="flex-1 px-4 py-3 text-sm focus:outline-none"
+            />
+            <button type="submit" class="bg-transparent px-4 text-white">
+              <i class="fas fa-chevron-right text-lg"></i>
+            </button>
+          </form>
+
+          <!-- ICON -->
+          <div class="text-2xl text-white">
+            <span
+              ><a
+                href="https://www.instagram.com/nrnshop_official/"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i> </a
+            ></span>
+            <span
+              ><a
+                href="https://www.facebook.com/NRNshopofficial"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i> </a
+            ></span>
+          </div>
+        </div>
+
+        <!-- 版權區 -->
+        <div
+          class="mx-auto mt-12 border-t border-white pt-6 text-center text-xs text-white lg:text-center lg:text-sm"
+        >
+          <div class="mx-auto w-screen">
+            © 2025 Yun Syu Integrated Technology Co., Ltd. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--Javascript-->
+    <script src="/dist/swiper-bundle.min.js"></script>
+    <script src="/src/main.js"></script>
+  </body>
+</html>
